@@ -132,6 +132,7 @@
     <element xsi:type="archimate:InfrastructureService" id="1128" name="Database Service"/>
     <element xsi:type="archimate:InfrastructureService" id="1455" name="Claim Files Service"/>
     <element xsi:type="archimate:InfrastructureService" id="1462" name="Customer File Service"/>
+    <element xsi:type="archimate:Device" id="9efb06d5" name="PCERika"/>
   </folder>
   <folder name="Motivation" id="fc275161" type="motivation">
     <element xsi:type="archimate:Principle" id="f5674126" name="Client Satisfaction Goal"/>
@@ -1395,6 +1396,11 @@
         <child xsi:type="archimate:DiagramObject" id="39407926" textAlignment="2" archimateElement="3db08b5c">
           <bounds x="204" y="108" width="140" height="55"/>
         </child>
+      </child>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" id="49e3a2e5" name="Erika">
+      <child xsi:type="archimate:DiagramObject" id="79968b42" textAlignment="2" archimateElement="9efb06d5">
+        <bounds x="456" y="252" width="120" height="55"/>
       </child>
     </element>
   </folder>
