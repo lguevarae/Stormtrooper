@@ -1402,10 +1402,6 @@
     <element xsi:type="archimate:ArchimateDiagramModel" id="49e3a2e5" name="Erika">
       <child xsi:type="archimate:DiagramObject" id="79968b42" textAlignment="2" archimateElement="9efb06d5">
         <bounds x="456" y="252" width="120" height="55"/>
-        <sourceConnection xsi:type="archimate:Connection" id="e2ab56d0" source="79968b42" target="f69e4557" relationship="c83bf19d"/>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="f69e4557" textAlignment="2" targetConnections="e2ab56d0" archimateElement="324">
-        <bounds x="192" y="240" width="120" height="55"/>
       </child>
     </element>
   </folder>
