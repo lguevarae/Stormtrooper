@@ -102,6 +102,7 @@
         <documentation>Customer Information Service</documentation>
       </element>
       <element xsi:type="archimate:ApplicationService" id="935" name="Policy Creation Service"/>
+      <element xsi:type="archimate:ApplicationComponent" id="66ddadb8" name="PRUEBA GR"/>
     </folder>
     <folder name="Data" id="ecb5797e">
       <element xsi:type="archimate:DataObject" id="946" name="Insurance Request Data"/>
@@ -133,6 +134,9 @@
     <element xsi:type="archimate:InfrastructureService" id="1455" name="Claim Files Service"/>
     <element xsi:type="archimate:InfrastructureService" id="1462" name="Customer File Service"/>
     <element xsi:type="archimate:Device" id="9efb06d5" name="PCERika"/>
+    <element xsi:type="archimate:Device" id="2e515765" name="PRUEBA SERVER GR"/>
+    <element xsi:type="archimate:InfrastructureService" id="79ef7fcf" name="PRUEBA SERVICE GR"/>
+    <element xsi:type="archimate:Node" id="9f8bfdbf" name="PRUEBA NODO GR"/>
   </folder>
   <folder name="Motivation" id="fc275161" type="motivation">
     <element xsi:type="archimate:Principle" id="f5674126" name="Client Satisfaction Goal"/>
@@ -345,6 +349,10 @@
       <element xsi:type="archimate:AssociationRelationship" id="dd9c00de" source="1101" target="1882"/>
     </folder>
     <element xsi:type="archimate:UsedByRelationship" id="c83bf19d" source="9efb06d5" target="324"/>
+    <element xsi:type="archimate:CompositionRelationship" id="2e1f5089" source="9f8bfdbf" target="2e515765"/>
+    <element xsi:type="archimate:AssignmentRelationship" id="ca7b6d9a" source="9f8bfdbf" target="79ef7fcf"/>
+    <element xsi:type="archimate:RealisationRelationship" id="cb488b8d" source="2e515765" target="79ef7fcf"/>
+    <element xsi:type="archimate:AssociationRelationship" id="017cda5e" source="66ddadb8" target="9f8bfdbf"/>
   </folder>
   <folder name="Views" id="e64e9b49" type="diagrams">
     <element xsi:type="archimate:ArchimateDiagramModel" id="3641" name="Archimate View">
@@ -1402,6 +1410,30 @@
     <element xsi:type="archimate:ArchimateDiagramModel" id="49e3a2e5" name="Erika">
       <child xsi:type="archimate:DiagramObject" id="79968b42" textAlignment="2" archimateElement="9efb06d5">
         <bounds x="456" y="252" width="120" height="55"/>
+      </child>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" id="19922b89" name="New ArchiMate View">
+      <child xsi:type="archimate:DiagramObject" id="75f19959" textAlignment="2" targetConnections="607d3149 fa4ae222" archimateElement="9f8bfdbf">
+        <bounds x="140" y="362" width="305" height="263"/>
+        <child xsi:type="archimate:DiagramObject" id="348baa78" textAlignment="2" fillColor="#80ffff" archimateElement="2e515765">
+          <bounds x="96" y="60" width="120" height="55"/>
+          <sourceConnection xsi:type="archimate:Connection" id="ac13d80c" source="348baa78" target="f3a5dc9e" relationship="cb488b8d"/>
+        </child>
+        <child xsi:type="archimate:DiagramObject" id="f3a5dc9e" textAlignment="2" targetConnections="ac13d80c" fillColor="#ff8080" archimateElement="79ef7fcf">
+          <bounds x="108" y="180" width="120" height="55"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:Group" id="ac3d2216" name="APP">
+        <bounds x="72" y="96" width="400" height="140"/>
+        <child xsi:type="archimate:DiagramObject" id="0fdeaa88" textAlignment="2" archimateElement="66ddadb8">
+          <bounds x="144" y="48" width="120" height="55"/>
+          <sourceConnection xsi:type="archimate:Connection" id="607d3149" source="0fdeaa88" target="75f19959" relationship="017cda5e"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:Note" id="e328f5d1" textAlignment="1">
+        <bounds x="12" y="264" width="185" height="80"/>
+        <sourceConnection id="fa4ae222" source="e328f5d1" target="75f19959"/>
+        <content>COMENT </content>
       </child>
     </element>
   </folder>
