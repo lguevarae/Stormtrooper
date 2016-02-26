@@ -79,7 +79,6 @@
       <element xsi:type="archimate:BusinessService" id="1226" name="Claims Payment Service"/>
       <element xsi:type="archimate:BusinessService" id="1220" name="Customer data mutation Service"/>
     </folder>
-    <element xsi:type="archimate:BusinessActor" id="7934feed" name="ERIKINHA"/>
   </folder>
   <folder name="Application" id="4a8e833a" type="application">
     <folder name="Applications" id="02643cbc">
@@ -354,9 +353,8 @@
     <element xsi:type="archimate:AssignmentRelationship" id="ca7b6d9a" source="9f8bfdbf" target="79ef7fcf"/>
     <element xsi:type="archimate:RealisationRelationship" id="cb488b8d" source="2e515765" target="79ef7fcf"/>
     <element xsi:type="archimate:AssociationRelationship" id="017cda5e" source="66ddadb8" target="9f8bfdbf"/>
-    <element xsi:type="archimate:AssociationRelationship" id="34163fea" source="7934feed" target="9efb06d5"/>
-    <element xsi:type="archimate:AssociationRelationship" id="158a1ff9" source="66ddadb8" target="9efb06d5"/>
-    <element xsi:type="archimate:RealisationRelationship" id="986dc865" source="9efb06d5" target="79ef7fcf"/>
+    <element xsi:type="archimate:TriggeringRelationship" id="6fcee5b8" source="9f8bfdbf" target="986"/>
+    <element xsi:type="archimate:UsedByRelationship" id="b7d424f4" source="9f8bfdbf" target="1016"/>
   </folder>
   <folder name="Views" id="e64e9b49" type="diagrams">
     <element xsi:type="archimate:ArchimateDiagramModel" id="3641" name="Archimate View">
@@ -1412,25 +1410,15 @@
       </child>
     </element>
     <element xsi:type="archimate:ArchimateDiagramModel" id="49e3a2e5" name="Erika">
-      <child xsi:type="archimate:DiagramObject" id="79968b42" textAlignment="2" targetConnections="d5e01492 9f0891b1" archimateElement="9efb06d5">
-        <bounds x="324" y="240" width="120" height="55"/>
-        <sourceConnection xsi:type="archimate:Connection" id="247cbfec" source="79968b42" target="94fc48d7" relationship="986dc865"/>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="d80af69d" textAlignment="2" archimateElement="66ddadb8">
-        <bounds x="312" y="108" width="120" height="55"/>
-        <sourceConnection xsi:type="archimate:Connection" id="9f0891b1" source="d80af69d" target="79968b42" relationship="158a1ff9"/>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="6d44fb48" textAlignment="2" archimateElement="7934feed">
-        <bounds x="84" y="384" width="120" height="55"/>
-        <sourceConnection xsi:type="archimate:Connection" id="d5e01492" source="6d44fb48" target="79968b42" relationship="34163fea"/>
-      </child>
-      <child xsi:type="archimate:DiagramObject" id="94fc48d7" textAlignment="2" targetConnections="247cbfec" archimateElement="79ef7fcf">
-        <bounds x="528" y="408" width="120" height="55"/>
+      <child xsi:type="archimate:DiagramObject" id="79968b42" textAlignment="2" archimateElement="9efb06d5">
+        <bounds x="456" y="252" width="120" height="55"/>
       </child>
     </element>
     <element xsi:type="archimate:ArchimateDiagramModel" id="19922b89" name="New ArchiMate View">
       <child xsi:type="archimate:DiagramObject" id="75f19959" textAlignment="2" targetConnections="607d3149 fa4ae222" archimateElement="9f8bfdbf">
         <bounds x="140" y="362" width="305" height="263"/>
+        <sourceConnection xsi:type="archimate:Connection" id="c5a7d365" source="75f19959" target="4203d726" relationship="6fcee5b8"/>
+        <sourceConnection xsi:type="archimate:Connection" id="b2e4c8f7" source="75f19959" target="35f75209" relationship="b7d424f4"/>
         <child xsi:type="archimate:DiagramObject" id="348baa78" textAlignment="2" fillColor="#80ffff" archimateElement="2e515765">
           <bounds x="96" y="60" width="120" height="55"/>
           <sourceConnection xsi:type="archimate:Connection" id="ac13d80c" source="348baa78" target="f3a5dc9e" relationship="cb488b8d"/>
@@ -1449,7 +1437,13 @@
       <child xsi:type="archimate:Note" id="e328f5d1" textAlignment="1">
         <bounds x="12" y="264" width="185" height="80"/>
         <sourceConnection id="fa4ae222" source="e328f5d1" target="75f19959"/>
-        <content>COMENT </content>
+        <content>COMENT: MAL HECHO </content>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="35f75209" textAlignment="2" targetConnections="b2e4c8f7" archimateElement="1016">
+        <bounds x="675" y="282" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="4203d726" textAlignment="2" targetConnections="c5a7d365" archimateElement="986">
+        <bounds x="688" y="486" width="120" height="55"/>
       </child>
     </element>
   </folder>
